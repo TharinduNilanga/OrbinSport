@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1002.0" prefWidth="1917.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardFormController">
+   <children>
+      <Pane prefHeight="936.0" prefWidth="1900.0" style="-fx-background-color: #c8c6cf;">
+         <children>
+            <Pane fx:id="root" layoutX="235.0" prefHeight="76.0" prefWidth="1680.0" style="-fx-background-color: #1c2645; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="607.0" layoutY="4.0" opacity="0.64" prefHeight="62.0" prefWidth="479.0" text="ORBIN SPORT">
+                     <font>
+                        <Font name="Cooper Black" size="47.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1955bc" />
+                              <Stop color="#78a2e1" offset="0.018115942028985508" />
+                              <Stop color="#fbfbfb" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0">
+                           <image>
+                              <Image url="@../assets/jogging.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="21.0" text="Date :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1955bc" />
+                              <Stop color="#78a2e1" offset="0.018115942028985508" />
+                              <Stop color="#fbfbfb" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="71.0" prefHeight="69.0" prefWidth="266.0" text="2021-09-05">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1955bc" />
+                              <Stop color="#78a2e1" offset="0.018115942028985508" />
+                              <Stop color="#fbfbfb" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="1587.0" layoutY="1.0" prefHeight="69.0" prefWidth="92.0" text="17:47:45">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1955bc" />
+                              <Stop color="#78a2e1" offset="0.018115942028985508" />
+                              <Stop color="#fbfbfb" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label layoutX="1535.0" layoutY="21.0" text="Time :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1955bc" />
+                              <Stop color="#78a2e1" offset="0.018115942028985508" />
+                              <Stop color="#fbfbfb" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="1457.0" layoutY="14.0" onMouseClicked="#bellNotification">
+                     <image>
+                        <Image url="@../assets/bellNew.png" />
+                     </image>
+                  </ImageView>
+                  <Circle fill="WHITE" layoutX="1509.0" layoutY="21.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label fx:id="lblNotificationNew" layoutX="1505.0" layoutY="11.0" text="0" textFill="#900505">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane layoutY="81.0" prefHeight="920.0" prefWidth="232.0" style="-fx-background-color: #1c2645;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="33.0" layoutY="845.0" onAction="#logOutOnAction" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #729DA8;" text="LOG OUT" textFill="#141313">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0">
+                           <image>
+                              <Image url="@../assets/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <VBox layoutX="1.0" prefHeight="774.0" prefWidth="229.0" style="-fx-background-color: #1c2645;">
+                     <children>
+                        <Button fx:id="btnProduct" mnemonicParsing="false" onAction="#addProductsOnAction" opacity="0.43" prefHeight="90.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 16;" stylesheets="@../css/button.css" text="Products     ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="@../assets/add-to-basket.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnRepair" mnemonicParsing="false" onAction="#addRepairProductsOnAction" opacity="0.43" prefHeight="90.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 16;" stylesheets="@../css/button.css" text="Repair product">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="@../assets/add-to-basket.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnSupplier" mnemonicParsing="false" onAction="#supplierOnAction" opacity="0.43" prefHeight="90.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 16;" stylesheets="@../css/button.css" text="Suppliers    ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="@../assets/supplier.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#UserOnAction" opacity="0.43" prefHeight="90.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 16;" stylesheets="@../css/button.css" text="Accounts     ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="@../assets/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnSystemReport" mnemonicParsing="false" onAction="#SystemReportOnAction" opacity="0.43" prefHeight="90.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 16;" stylesheets="@../css/button.css" text="System Report">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="@../assets/data-complexity.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnReport" mnemonicParsing="false" onAction="#ReportOnAction" opacity="0.43" prefHeight="90.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 16;" stylesheets="@../css/button.css" text=" Reports    ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="43.0" fitWidth="51.0">
+                                 <image>
+                                    <Image url="@../assets/business-report.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnDetails" mnemonicParsing="false" onAction="#detailsOnAction" opacity="0.43" prefHeight="90.0" prefWidth="209.0" style="-fx-background-color: white; -fx-background-radius: 16;" stylesheets="@../css/button.css" text="  Details   ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="46.0" fitWidth="45.0">
+                                 <image>
+                                    <Image url="@../assets/employee.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="imageLoad" fitHeight="48.0" fitWidth="52.0" layoutX="90.0" layoutY="785.0">
+                     <image>
+                        <Image url="@../assets/loading.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="76.0" prefWidth="232.0" style="-fx-background-color: #1c2645;">
+               <children>
+                  <Label layoutX="45.0" layoutY="7.0" text="Admin" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB Bold" size="41.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="ui" layoutX="235.0" layoutY="79.0" prefHeight="920.0" prefWidth="1680.0" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

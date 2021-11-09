@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="920.0" prefWidth="1680.0" style="-fx-background-color: #313b59;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddRepairProductController">
+   <children>
+      <Label layoutX="13.0" layoutY="6.0" prefHeight="53.0" prefWidth="475.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="13.0" text="Repair Product Id :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="14.0" layoutY="107.0" prefHeight="162.0" prefWidth="1630.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;">
+         <children>
+            <Pane layoutX="1426.0" layoutY="88.0" prefHeight="60.0" prefWidth="190.0" style="-fx-background-color: #313b59; -fx-background-radius: 10;">
+               <children>
+                  <Button fx:id="btnAdd" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#AddProductOnAction" prefHeight="31.0" prefWidth="141.0" style="-fx-background-color: #141680;" text="Add Products" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <AnchorPane layoutX="56.0" layoutY="14.0" prefHeight="53.0" prefWidth="255.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtProductId" layoutX="7.0" layoutY="11.0" prefHeight="31.0" prefWidth="242.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <Label layoutX="46.0" layoutY="7.0" style="-fx-background-color: #d7d5de;" text="  Product Id  ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="374.0" layoutY="14.0" prefHeight="53.0" prefWidth="453.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtDescription" layoutX="7.0" layoutY="11.0" onAction="#txtdescOnAction" prefHeight="31.0" prefWidth="437.0" promptText="enter description.." />
+                  <Label layoutX="15.0" layoutY="-8.0" style="-fx-background-color: #d7d5de;" text="   Description  ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="882.0" layoutY="14.0" prefHeight="53.0" prefWidth="314.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtqty" layoutX="7.0" layoutY="11.0" onAction="#txtQTYOnAction" prefHeight="31.0" prefWidth="299.0" promptText="enter  qty.." />
+                  <Label layoutX="15.0" layoutY="-8.0" style="-fx-background-color: #d7d5de;" text="   qty  ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1243.0" layoutY="14.0" prefHeight="53.0" prefWidth="381.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtUnitPrice" layoutX="7.0" layoutY="11.0" onAction="#txtUnitPriceOnAction" prefHeight="31.0" prefWidth="368.0" promptText="enter price.." />
+                  <Label layoutX="15.0" layoutY="-8.0" style="-fx-background-color: #d7d5de;" text="   Unit Price   ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblProduct" layoutX="18.0" layoutY="510.0" prefHeight="401.0" prefWidth="1630.0" style="-fx-background-color: #d7d5de;" stylesheets="@../css/TableView.css">
+         <columns>
+            <TableColumn fx:id="colProductId" prefWidth="368.0000305175781" text="Product Id" />
+            <TableColumn fx:id="colDescription" prefWidth="600.0" text="Description" />
+            <TableColumn fx:id="colqty" prefWidth="319.0" text="qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="340.0" text="Unit Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="517.0" layoutY="6.0" prefHeight="53.0" prefWidth="1156.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="952.0" layoutY="13.0" text="Add Repair Products">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="297.0" prefHeight="31.0" prefWidth="242.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="302.0" text="Update/Delete Products" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="76.0" prefHeight="31.0" prefWidth="242.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="273.0" layoutY="297.0" prefHeight="31.0" prefWidth="1373.0" />
+      <Separator layoutX="18.0" layoutY="489.0" prefHeight="21.0" prefWidth="1630.0" />
+      <Label layoutX="1255.0" layoutY="66.0" prefHeight="53.0" prefWidth="389.0" style="-fx-background-color: #d7d5de;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1270.0" layoutY="75.0" text="Search products :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="-152.0" endY="14.999984741210938" layoutX="402.0" layoutY="92.0" startX="-380.0" startY="14.999984741210938" />
+      <Line endX="718.0" endY="-1.52587890625E-5" layoutX="926.0" layoutY="107.0" startX="329.0" startY="-1.52587890625E-5" />
+      <TextField fx:id="txtSearch" layoutX="1392.0" layoutY="70.0" onAction="#txtSerach" onKeyReleased="#searchOnAction" prefHeight="31.0" prefWidth="242.0" promptText="description.." />
+      <AnchorPane layoutX="18.0" layoutY="328.0" prefHeight="162.0" prefWidth="1630.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;">
+         <children>
+            <AnchorPane layoutX="46.0" layoutY="14.0" prefHeight="53.0" prefWidth="255.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtProductIdNew" layoutX="7.0" layoutY="11.0" onAction="#productIdOnAction" prefHeight="31.0" prefWidth="242.0" text="P-00">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <Label layoutX="46.0" layoutY="7.0" style="-fx-background-color: #d7d5de;" text="  Product Id  ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="370.0" layoutY="14.0" prefHeight="53.0" prefWidth="453.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtDescriptionNew" layoutX="7.0" layoutY="11.0" onAction="#descOnAction" prefHeight="31.0" prefWidth="437.0" promptText="enter description.." />
+                  <Label layoutX="15.0" layoutY="-8.0" style="-fx-background-color: #d7d5de;" text="   Description  ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="876.0" layoutY="14.0" prefHeight="53.0" prefWidth="326.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtqtyNew" layoutX="7.0" layoutY="11.0" onAction="#qtyOnAction" prefHeight="31.0" prefWidth="314.0" promptText="enter  qty.." />
+                  <Label layoutX="15.0" layoutY="-8.0" style="-fx-background-color: #d7d5de;" text="   qty  ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1244.0" layoutY="14.0" prefHeight="53.0" prefWidth="381.0" style="-fx-background-color: #d7d5de; -fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtUnitPriceNew" layoutX="7.0" layoutY="11.0" onAction="#priceOnAction" prefHeight="31.0" prefWidth="368.0" promptText="enter price.." />
+                  <Label layoutX="15.0" layoutY="-8.0" style="-fx-background-color: #d7d5de;" text="   Unit Price   ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="1267.0" layoutY="88.0" prefHeight="60.0" prefWidth="349.0" style="-fx-background-color: #313b59; -fx-background-radius: 10;">
+               <children>
+                  <Button fx:id="btnUpdate" layoutX="185.0" layoutY="15.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="31.0" prefWidth="141.0" style="-fx-background-color: #141680;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDelete" layoutX="26.0" layoutY="15.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="141.0" style="-fx-background-color: #c72b08;" text="Delete " textFill="#fffbfb">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Line endX="-139.0" endY="15.0" layoutX="376.0" layoutY="-15.0" startX="-370.0" startY="15.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblProductId" layoutX="286.0" layoutY="13.0" text="RP-001">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="82.0" text="Add Repair Products" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

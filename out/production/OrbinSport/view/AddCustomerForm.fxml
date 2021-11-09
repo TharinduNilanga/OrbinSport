@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customer" prefHeight="920.0" prefWidth="1680.0" style="-fx-background-color: #313b59;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
+   <children>
+      <TableView fx:id="tblCustomer" layoutX="11.0" layoutY="570.0" prefHeight="337.0" prefWidth="1662.0" style="-fx-background-color: #d7d5de;" stylesheets="@../css/TableView.css">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="173.99993896484375" text="cId" />
+          <TableColumn fx:id="colUserId" prefWidth="249.00003051757812" text="userId" />
+            <TableColumn fx:id="colName" prefWidth="464.0" text="name" />
+            <TableColumn fx:id="colNic" prefWidth="405.0" text="NIC" />
+            <TableColumn fx:id="colPhoneNo" prefWidth="367.0" text="phoneNo" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="78.0" layoutY="52.0" prefHeight="474.0" prefWidth="589.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="244.0" layoutY="4.0" text="Add Customer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="51.0" layoutY="40.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtCustomerID" layoutX="21.0" layoutY="12.0" prefHeight="31.0" prefWidth="467.0" unFocusColor="#141414">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXTextField>
+               </children>
+            </AnchorPane>
+            <Label layoutX="62.0" layoutY="30.0" style="-fx-background-color: #d7d5de;" text="  Customer Id ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="51.0" layoutY="115.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <JFXComboBox fx:id="cmbUserID" layoutX="21.0" layoutY="12.0" prefHeight="31.0" prefWidth="467.0" promptText="userId.." unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="51.0" layoutY="185.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="12.0" layoutY="-11.0" style="-fx-background-color: #d7d5de;" text="   Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtCustomerName" layoutX="21.0" layoutY="12.0" onAction="#txtName" prefHeight="31.0" prefWidth="467.0" promptText="enter  name.." unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="62.0" layoutY="105.0" style="-fx-background-color: #d7d5de;" text="  User Id">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="51.0" layoutY="255.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="15.0" layoutY="-11.0" style="-fx-background-color: #d7d5de;" text="   NIC">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNIC" layoutX="21.0" layoutY="12.0" onAction="#txtNIC" prefHeight="31.0" prefWidth="467.0" promptText="enter NIC.." unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="51.0" layoutY="333.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtPhoneNo" layoutX="21.0" layoutY="12.0" onAction="#txtPhoneNo" prefHeight="31.0" prefWidth="467.0" promptText="enter phone number.." unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="62.0" layoutY="323.0" style="-fx-background-color: #d7d5de;" text="   Phone No">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="371.0" layoutY="400.0" prefHeight="60.0" prefWidth="189.0" style="-fx-background-color: #313b59; -fx-background-radius: 10;">
+               <children>
+                  <JFXButton fx:id="btnAddCustomer" layoutX="53.0" layoutY="15.0" onAction="#AddCustomerOnAction" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #141680;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="672.0" layoutY="51.0" orientation="VERTICAL" prefHeight="474.0" prefWidth="336.0" />
+      <Separator layoutX="13.0" layoutY="537.0" prefHeight="27.0" prefWidth="1654.0" />
+      <AnchorPane layoutX="1004.0" layoutY="52.0" prefHeight="474.0" prefWidth="589.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="244.0" layoutY="4.0" text="Update / Delete Customer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="51.0" layoutY="40.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtCustomerIdNew" layoutX="21.0" layoutY="12.0" onAction="#customerIdOnAction" prefHeight="31.0" prefWidth="467.0" text="C-00" unFocusColor="#141414">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXTextField>
+               </children>
+            </AnchorPane>
+            <Label layoutX="62.0" layoutY="30.0" style="-fx-background-color: #d7d5de;" text="  Customer Id ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="51.0" layoutY="115.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtUserIdNew" layoutX="21.0" layoutY="12.0" onAction="#userIdOnAction" prefHeight="31.0" prefWidth="467.0" promptText="enter user id.." unFocusColor="#141414" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="51.0" layoutY="185.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="12.0" layoutY="-11.0" style="-fx-background-color: #d7d5de;" text="   Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNameNew" layoutX="21.0" layoutY="12.0" onAction="#nameOnAction" prefHeight="31.0" prefWidth="467.0" promptText="enter  name.." unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="62.0" layoutY="105.0" style="-fx-background-color: #d7d5de;" text="  User Id">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="51.0" layoutY="255.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="15.0" layoutY="-11.0" style="-fx-background-color: #d7d5de;" text="   NIC">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNICNew" layoutX="21.0" layoutY="12.0" onAction="#NICOnAction" prefHeight="31.0" prefWidth="467.0" promptText="enter NIC.." unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="51.0" layoutY="333.0" prefHeight="55.0" prefWidth="509.0" style="-fx-border-color: black;">
+               <children>
+                  <JFXTextField fx:id="txtPhoneNoNew" layoutX="21.0" layoutY="12.0" onAction="#phoneNoOnAction" prefHeight="31.0" prefWidth="467.0" promptText="enter phone number.." unFocusColor="BLACK" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="62.0" layoutY="323.0" style="-fx-background-color: #d7d5de;" text="   Phone No">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="306.0" layoutY="400.0" prefHeight="60.0" prefWidth="258.0" style="-fx-background-color: #313b59; -fx-background-radius: 10;">
+               <children>
+                  <JFXButton fx:id="btnDelete" layoutX="14.0" layoutY="15.0" onAction="#DeleteOnAction" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #c72b08;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnUpdate" layoutX="160.0" layoutY="15.0" onAction="#UpdateOnAction" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #141680;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="78.0" layoutY="7.0" prefHeight="40.0" prefWidth="578.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;" />
+      <Label layoutX="197.0" layoutY="9.0" text="Customer Id :">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerId" layoutX="348.0" layoutY="9.0" text="C-000">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="1360.0" layoutY="14.0" onKeyReleased="#CustomerSearchOnAction" prefHeight="31.0" prefWidth="233.0" promptText="enter customer Name.." />
+      <Label layoutX="1229.0" layoutY="19.0" text="search customer :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

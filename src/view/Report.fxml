@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="920.0" prefWidth="1680.0" style="-fx-background-color: #313b59;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportController">
+   <children>
+      <Pane layoutX="22.0" layoutY="14.0" prefHeight="47.0" prefWidth="1632.0" style="-fx-background-color: #d7d5de; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="762.0" layoutY="-5.0" text="Reports">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="631.0" layoutY="264.0" prefHeight="327.0" prefWidth="479.0" style="-fx-background-color: #729DA8; -fx-background-radius: 8;">
+         <children>
+            <VBox layoutX="261.0" prefHeight="327.0" prefWidth="217.0" style="-fx-background-color: #A7AFB1; -fx-background-radius: 9;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#incomeDailyOnAction" prefHeight="75.0" prefWidth="176.0" style="-fx-background-radius: 10; -fx-background-color: #D0DFE3;" text="Income Daily">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="22.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#incomeMonthlyOnAction" prefHeight="75.0" prefWidth="176.0" style="-fx-background-radius: 10; -fx-background-color: #D0DFE3;" text="Income Monthly" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="22.0" right="10.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#incomeAnnuallyOnAction" prefHeight="75.0" prefWidth="176.0" style="-fx-background-radius: 10; -fx-background-color: #D0DFE3;" text="Income Annually">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="22.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="245.0" fitWidth="228.0" layoutX="17.0" layoutY="46.0">
+               <image>
+                  <Image url="@../assets/business-and-finance.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="1159.0" layoutY="292.0" prefHeight="271.0" prefWidth="479.0" style="-fx-background-color: #729DA8; -fx-background-radius: 9;">
+         <children>
+            <VBox layoutX="262.0" prefHeight="271.0" prefWidth="217.0" style="-fx-background-color: #A7AFB1; -fx-background-radius: 9;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#LeastMovableOnAction" prefHeight="60.0" style="-fx-background-radius: 10; -fx-background-color: #D0DFE3;" text="Least Movabe Products">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#MoastMovableOnAction" prefHeight="60.0" style="-fx-background-radius: 10; -fx-background-color: #D0DFE3;" text="Most Movable Products">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="228.0" fitWidth="236.0" layoutX="14.0" layoutY="20.0">
+               <image>
+                  <Image url="@../assets/package.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="22.0" layoutY="796.0" prefHeight="75.0" prefWidth="509.0" style="-fx-background-color: #729DA8; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="14.0" layoutY="11.0" text="Cash In Hand :">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCashInHand" layoutX="267.0" layoutY="11.0" text="0.00/=" textFill="#c90e0e">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="22.0" layoutY="264.0" prefHeight="327.0" prefWidth="546.0" style="-fx-background-color: #729DA8; -fx-background-radius: 9;">
+         <children>
+            <ImageView fitHeight="228.0" fitWidth="236.0" layoutX="35.0" layoutY="50.0">
+               <image>
+                  <Image url="@../assets/data-complexity.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="286.0" prefHeight="327.0" prefWidth="261.0" style="-fx-background-color: #A7AFB1; -fx-background-radius: 10;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#productReportOnAction" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #D0DFE3; -fx-background-radius: 10;" text="Product Report">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#supplierReportOnAction" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: #D0DFE3; -fx-background-radius: 10;" text="Supplier Report">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#RepairProductReportOnAction" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: #D0DFE3; -fx-background-radius: 10;" text="Repair Product Report">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#orderReportOnAction" prefHeight="50.0" prefWidth="217.0" style="-fx-background-color: #D0DFE3; -fx-background-radius: 10;" text="Order Report">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#returnReportOnAction" prefHeight="50.0" prefWidth="218.0" style="-fx-background-color: #D0DFE3; -fx-background-radius: 10;" text="Return Report">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

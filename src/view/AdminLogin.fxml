@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="920.0" prefWidth="1680.0" style="-fx-background-color: #313b59;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminLoginController">
+   <children>
+      <TableView fx:id="tblRepair" layoutX="31.0" layoutY="50.0" prefHeight="423.0" prefWidth="643.0" style="-fx-background-color: #d7d5de;" stylesheets="@../css/TableView.css">
+         <columns>
+            <TableColumn fx:id="colRepairNo" prefWidth="151.0" text="Repair Number" />
+            <TableColumn fx:id="colCustomerId" prefWidth="119.00003051757812" text="Customer Id" />
+            <TableColumn fx:id="colRepairType" prefWidth="157.0" text="Repair Type" />
+            <TableColumn fx:id="colEstimatedPrice" prefWidth="216.0" text="Estimated Price" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblOrder" layoutX="31.0" layoutY="519.0" prefHeight="387.0" prefWidth="1609.0" style="-fx-background-color: #d7d5de;" stylesheets="@../css/TableView.css">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="136.0" text="Order Id" />
+            <TableColumn fx:id="colproductId" prefWidth="206.0" text="Product Id" />
+            <TableColumn fx:id="colOrderType" prefWidth="315.0" text="Order Type" />
+            <TableColumn fx:id="colQTY" prefWidth="265.0" text="qty" />
+            <TableColumn fx:id="colDiscount" prefWidth="315.0" text="Discount" />
+            <TableColumn fx:id="colTotal" prefWidth="371.0" text="Total" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblReturn" layoutX="692.0" layoutY="50.0" prefHeight="423.0" prefWidth="948.0" style="-fx-background-color: #d7d5de;" styleClass="C:\1 st semester project\OrbinSport\src\css" stylesheets="@../css/TableView.css">
+         <columns>
+            <TableColumn fx:id="colReturnNo" prefWidth="154.0" text="Return No" />
+            <TableColumn fx:id="coloId" prefWidth="158.0" text="Order Id" />
+            <TableColumn fx:id="colUserId" prefWidth="173.0" text="User Id" />
+            <TableColumn fx:id="colpId" prefWidth="240.0" text="Returned product Id" />
+            <TableColumn fx:id="colCost" prefWidth="221.0" text="Cost" />
+         </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="13.0" prefHeight="32.0" prefWidth="643.0" style="-fx-background-color: white;" />
+      <Label layoutX="288.0" layoutY="19.0" text="Repair In Progress">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="692.0" layoutY="13.0" prefHeight="32.0" prefWidth="948.0" style="-fx-background-color: white;" />
+      <Label layoutX="1139.0" layoutY="19.0" text="Returns">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="485.0" prefHeight="32.0" prefWidth="1609.0" style="-fx-background-color: white;" />
+      <Label layoutX="793.0" layoutY="490.0" text="Order Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
